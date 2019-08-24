@@ -17,6 +17,6 @@ dependencies {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'com.mark.test.WordCounter'
+        attributes 'Main-Class': 'com.wordcounter.WordCounter'
     }
 }
