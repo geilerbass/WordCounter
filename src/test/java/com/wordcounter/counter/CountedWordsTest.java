@@ -13,7 +13,7 @@ import static org.junit.Assert.assertThat;
 public class CountedWordsTest {
 
     @Test
-    public void countWordsTestExample() {
+    public void countWordsWithProvidedExample() {
 
         // given
         List<String> exampleWords = Arrays.asList("a", "mate", "material", "may", "maybe", "right", "maybe");
@@ -24,7 +24,7 @@ public class CountedWordsTest {
         expected.put("right", 1);
 
         // when
-        exampleWords.forEach(countedWords::validateWord);
+        exampleWords.forEach(countedWords::checkWordAgainstCountedWords);
         Map<String, Integer> result = countedWords.getCountedWords();
 
         // then
@@ -32,7 +32,7 @@ public class CountedWordsTest {
     }
 
     @Test
-    public void countWordsTestAllDifferent() {
+    public void countWordsWhereAllWordsAreDifferent() {
         // given
         List<String> exampleWords = Arrays.asList("a", "b", "c", "d", "e", "f", "g");
         CountedWords countedWords = new CountedWords();
@@ -46,7 +46,7 @@ public class CountedWordsTest {
         expected.put("g", 1);
 
         // when
-        exampleWords.forEach(countedWords::validateWord);
+        exampleWords.forEach(countedWords::checkWordAgainstCountedWords);
         Map<String, Integer> result = countedWords.getCountedWords();
 
         // then
@@ -54,7 +54,7 @@ public class CountedWordsTest {
     }
 
     @Test
-    public void countWordsTestAllTheSame() {
+    public void countWordsWhereAllWordsAreTheSame() {
         // given
         List<String> exampleWords = Arrays.asList("word", "word", "word", "word", "word", "word", "word", "word");
         CountedWords countedWords = new CountedWords();
@@ -62,7 +62,7 @@ public class CountedWordsTest {
         expected.put("word", 8);
 
         // when
-        exampleWords.forEach(countedWords::validateWord);
+        exampleWords.forEach(countedWords::checkWordAgainstCountedWords);
         Map<String, Integer> result = countedWords.getCountedWords();
 
         // then

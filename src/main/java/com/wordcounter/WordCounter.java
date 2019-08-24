@@ -16,7 +16,7 @@ public class WordCounter {
 
     public Map<String, Integer> countWordsInFile(String filePath) {
         CountedWords countedWords = new CountedWords();
-        new FileHandlerImpl(filePath).processFile(countedWords::validateWord);
+        new FileHandlerImpl(filePath).processFile(countedWords::checkWordAgainstCountedWords);
         return countedWords.getCountedWords();
     }
 
