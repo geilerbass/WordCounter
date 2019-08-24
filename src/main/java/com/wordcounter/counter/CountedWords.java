@@ -1,4 +1,4 @@
-package com.mark.test.counter;
+package com.wordcounter.counter;
 
 import java.util.HashMap;
 import java.util.Iterator;

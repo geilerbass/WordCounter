@@ -1,4 +1,4 @@
-package com.mark.test.output;
+package com.wordcounter.output;
 
 import java.util.Map;
 

@@ -1,8 +1,8 @@
-package com.mark.test;
+package com.wordcounter;
 
-import com.mark.test.counter.CountedWords;
-import com.mark.test.file.FileHandlerImpl;
-import com.mark.test.output.SystemOutOutputHandler;
+import com.wordcounter.counter.CountedWords;
+import com.wordcounter.file.FileHandlerImpl;
+import com.wordcounter.output.SystemOutOutputHandler;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package com.mark.test.file;
+package com.wordcounter.file;
 
 import java.util.function.Consumer;
 
